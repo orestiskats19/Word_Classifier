@@ -2,13 +2,14 @@ import re
 import datefinder
 import numpy as np
 
+
 class Utils:
     """
     Utils Class: Methods that support the search for embeddings, random strings and dates
     """
-    def __init__(self, embeddings_repository):
+    def __init__(self, embeddings_repository, num_dimensions):
         self.embeddings_repository = embeddings_repository
-        self.num_of_embeddings = 300
+        self.num_dimensions = num_dimensions
 
     def embedding_finder(self, string):
         """
@@ -17,7 +18,7 @@ class Utils:
         :param string: The string that wants to find. It can be multiple words.
         :return: The embedding of the word or None if doesn't exist in the model
         """
-        sum_embedding = np.zeros(self.num_of_embeddings)
+        sum_embedding = np.zeros(self.num_dimensions)
         string = string.strip(' \.')
         string = re.sub(r'[^\w\s]', ' ', string)
         words_in_word = re.split('\s+', string)
@@ -35,13 +36,13 @@ class Utils:
         :param word: The word that wants to find
         :return: The embedding of the word or None if doesn't exist in the model
         """
-        embedding = self.__get_vector(word)
+        embedding = self.__get_embedding(word)
         if embedding is not None:
             return embedding
         else:
             return None
 
-    def __get_vector(self, word):
+    def __get_embedding(self, word):
         """
         Try to find the embedding
         :param word: The word that wants to find
