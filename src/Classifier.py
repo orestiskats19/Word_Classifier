@@ -15,7 +15,7 @@ class Classifier:
         :param word: The input string from the user that will be classified
         :param google_repository: Repository of word embeddings from google
         :param wiki_repository: Repository of word embeddings from wiki
-        :return: The class of the input
+        :return: The class of the input string
         """
         google_utils = EmbeddingsUtils(google_repository, google_repository.vector_size)
         wiki_utils = EmbeddingsUtils(wiki_repository, wiki_repository.vector_size)
@@ -42,7 +42,7 @@ class Classifier:
 if __name__ == '__main__':
     print("\nPlease wait the embeddings repository is loading...\n")
     embeddings_repository = models.KeyedVectors\
-        .load_word2vec_format('../data/word_embeddings/GoogleNews-vectors-negative300.bin.gz', binary=True)
+        .load_word2vec_format('../data/pre_trained_models/GoogleNews-vectors-negative300.bin.gz', binary=True)
     dates_repository = api.load("glove-wiki-gigaword-100")
     classifier = Classifier()
     while True:

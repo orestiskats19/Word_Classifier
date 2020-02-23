@@ -17,7 +17,7 @@ class Trainer:
         """
         print("Loading the emebeddings...")
         google_repository = models.KeyedVectors.load_word2vec_format(
-            '../data/word_embeddings/GoogleNews-vectors-negative300.bin.gz', binary=True)
+            '../data/pre_trained_models/GoogleNews-vectors-negative300.bin.gz', binary=True)
         wiki_repository = api.load("glove-wiki-gigaword-100")
 
         google_utils = EmbeddingsUtils(google_repository, google_repository.vector_size)
