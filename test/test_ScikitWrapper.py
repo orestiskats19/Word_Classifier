@@ -1,7 +1,6 @@
 import unittest
 import numpy as np
 from sklearn import svm
-
 from src.wrapper import ScikitWrapper
 
 
