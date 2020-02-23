@@ -23,10 +23,10 @@ python -m Trainer
 
 
 ### Use the Classifier
-
+To run the classifier please type:
 ```
 cd src/
 python -m Classifier
 ```
-
+Then, the classifier will ask you to type a word that you would like to classify.
 
