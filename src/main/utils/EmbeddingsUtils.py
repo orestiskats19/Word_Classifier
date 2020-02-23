@@ -3,7 +3,7 @@ import datefinder
 import numpy as np
 
 
-class Utils:
+class EmbeddingsUtils:
     """
     Utils Class: Methods that support the search for embeddings, random strings and dates
     """
@@ -52,19 +52,6 @@ class Utils:
             return self.embeddings_repository[word]
         except KeyError:
             return None
-
-    @staticmethod
-    def random_string_finder(string):
-        """
-        If a string has more than 20% of the character capitals or numbers then is a random string.
-        :param string: The input string
-        :return: True or False
-        """
-        if len(string) > 0:
-            if len(re.findall(r'[A-Z0-9]', string)) / len(string) < 0.20:
-                return False
-            return True
-        return False
 
     @staticmethod
     def date_finder(string):

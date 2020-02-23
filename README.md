@@ -4,4 +4,7 @@ The present project is a classifier system that takes in a string and output one
 classes - date, location, random string, company name, physical goods,
 other.
 
-Ple
+### Requirements
+
+1) Python 3.7
+2) GoogleNews-vectors-negative300.bin.gz. Please Download it from: and save it under data/word_embeddings/
