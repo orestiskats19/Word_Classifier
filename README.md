@@ -7,10 +7,10 @@ other.
 ### Requirements
 
 1) Python 3.7
-2) GoogleNews-vectors-negative300.bin.gz. Please Download it from:
+2) The embeddings repository: GoogleNews-vectors-negative300.bin.gz. Please Download it from:
  ```https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz```
  and save it under data/word_embeddings/
-3) The required python libraries are located under requirements.txt. in order to install it please type
+3) The required python libraries are located under requirements.txt. In order to install it please type
 ```pip install -r requirements.txt```
 
 ### Train the classifier

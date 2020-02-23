@@ -5,7 +5,6 @@ class RandomStringUtils:
     """
     Utils class to find if string is random string
     """
-
     def random_string_finder(self, string):
         """
         If a string has more than 20% of the character capitals or numbers then is a random string.
@@ -29,7 +28,6 @@ class RandomStringUtils:
         :return: True or False
         """
         list_of_consonants = re.findall(r'[bcdfghjklmnpqrstvwxz]+', string, re.IGNORECASE)
-        print(list_of_consonants,)
         if list_of_consonants:
             if int(len(max(list_of_consonants)) >= 3):
                 return True
@@ -43,7 +41,6 @@ class RandomStringUtils:
         :return: True or False
         """
         list_of_vowels = re.findall(r'[aeyuio]+', string, re.IGNORECASE)
-        print(list_of_vowels)
         if list_of_vowels:
             if int(len(max(list_of_vowels)) > 3):
                 return True
